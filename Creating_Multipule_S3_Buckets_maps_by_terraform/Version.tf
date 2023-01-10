@@ -8,12 +8,12 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 4.0"
     }
-
+    
   }
 }
 
 # Provider Block
 provider "aws" {
-  region  = "us-west-2"
+  region = "us-west-2"
   profile = "default" # Defining it for default profile is Optional
 }
