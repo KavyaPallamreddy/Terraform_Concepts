@@ -14,11 +14,11 @@ terraform {
 #Adding Backend as S3 for Remote State Storage
   backend "s3" {
   
-    bucket = "kavya-terrafrom-test-bucket"
-    key    = "prod/terraform.tfstate"
+    bucket = "terraform-kavya-prod-bucket"
+    key    = "workspaces/terraform.tfstate"
     region = "us-west-2"
     # For State Locking 
-    #dynamodb_table = "terraform-kavya-dev-state-lock-dynamo"
+    dynamodb_table = "terraform-prod-state-kavya-table"
     
   }
 

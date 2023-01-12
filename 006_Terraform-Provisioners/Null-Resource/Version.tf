@@ -8,30 +8,17 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 4.0"
     }
-     
+    null = {
+      source = "hashicorp/null"
+      version = "~> 3.2.1"
+    }
+    time = {
+      source = "hashicorp/time"
+      version = "0.9.1"
+    }   
   }
- 
-#Adding Backend as S3 for Remote State Storage
-  backend "s3" {
   
-    bucket = "kavya-terrafrom-test-bucket"
-    key    = "prod/terraform.tfstate"
-    region = "us-west-2"
-    # For State Locking 
-    #dynamodb_table = "terraform-kavya-dev-state-lock-dynamo"
-    
   }
-
-  
-  
-}
-
-
-
-
-
-
-
 # Provider Block
 provider "aws" {
   region  = var.aws_region
