@@ -8,24 +8,12 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 4.0"
     }
-
-  }
-  
-  
-  cloud {
-    organization = "kavyareddy"
-
-    workspaces {
-      name = "cli-driven"
-    }
+    
   }
 }
- 
-
-
 
 # Provider Block
 provider "aws" {
-  region  = var.aws_region
+  region = "us-west-2"
   
 }

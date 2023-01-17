@@ -10,22 +10,10 @@ terraform {
     }
 
   }
-  
-  
-  cloud {
-    organization = "kavyareddy"
-
-    workspaces {
-      name = "cli-driven"
-    }
-  }
 }
- 
-
-
 
 # Provider Block
 provider "aws" {
   region  = var.aws_region
-  
+  profile = "default" # Defining it for default profile is Optional
 }

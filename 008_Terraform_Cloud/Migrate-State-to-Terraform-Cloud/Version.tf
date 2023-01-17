@@ -11,17 +11,14 @@ terraform {
 
   }
   
-  
   cloud {
     organization = "kavyareddy"
 
     workspaces {
-      name = "cli-driven"
+      name = "state-migration"
     }
   }
 }
- 
-
 
 
 # Provider Block
